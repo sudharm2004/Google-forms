@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #f0ebf8;
+    font-family:'Roboto', Helvetica,Arial,sans-serif;
+}
+a{
+    text-decoration: none;
+}
+p{
+    margin: 15px;
+}
+span{
+    color: red;
+}
+.top{
+    background-color: white;
+    border-top: 10px solid rgb(103, 58, 183);
+    border-radius: 10px;
+    width:  40vw;
+    height: 250px;
+    margin: 15px auto;
+}
+.top span{
+    color: red;
+    margin: 15px;
+}
+.top h1{
+    font-family: 'Google Sans', 'Roboto', Helvetica, Arial, sans-serif;
+    font-weight: lighter;
+    margin: 15px;
+}
+.line{
+    border-top: 1px solid #dadce0;
+    width: 100%;
+}
+.inputbox
+{
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    width:  40vw;
+    height: 145px;
+    margin: 15px auto;
+}
+
+.input-text{
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    /* border-bottom-style: none; */
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.input-text:focus{
+    border: none;
+    outline: none;
+}
+
+
+.inputtextdiv {
+    position: relative;
+    margin: 15px;
+    height: 30px;
+    width: 70%;
+}
+
+.underline{
+    position: absolute;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.underline::after{
+    content: "";
+    position: absolute;
+    background-color: rgb(103,58,183);
+    height: 100%;
+    bottom: 0;
+    width: 100%;
+
+    transform: scalex(0);
+    transition: transform 0.3s ease;
+}
+
+.input-text:focus + .underline::after{
+    transform: scale(1);
+}
+
+
+.inputbox-course
+{
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    width:  40vw;
+    height: 245px;
+    margin: 15px auto;
+}
+.input-radio
+{
+    margin: 0px 0px 0px 15px ;
+}
+
+.inputbox-year
+{
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    width:  40vw;
+    height: 160px;
+    margin: 15px auto;
+}
+
+.button{
+    height: 100px;
+    width:  40vw;
+    margin: 15px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#Submit{
+    height: 36px;
+    width: 95px;
+    background-color: rgb(103, 58, 183);
+    border-radius: 5px;
+    color: white;
+    font-size: 15px ;
+}
+#clear{
+    height: 36px;
+    width: 95px;
+    background-color: #f0ebf8;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: rgb(103, 58, 183);
+    font-size: 15px ;
+    border-style: none;
+}
+#clear:active{
+    border-style: solid ;
+}
+
+@media screen and (max-width:1000px) {
+    .top{
+        width: 80vw;
+    }
+    .inputbox{
+        width: 80vw;
+    }
+    .inputbox-course{
+        width: 80vw;
+    }
+    .inputbox-year{
+        width: 80vw;
+    }
+    .button{
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .top{
+        height: 300px;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .top{
+        height: 400px;
+    }
+}
